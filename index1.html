@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pizza Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Pizza Paradise</h1>
+    <p>Your favorite pizza, delivered fresh and hot!</p>
+  </header>
+
+  <main>
+    <!-- Filter Section -->
+    <section class="filters">
+      <h2>Filter Pizzas</h2>
+      <div class="filter-controls">
+        <label for="category-filter">Category:</label>
+        <select id="category-filter">
+          <option value="all">All Categories</option>
+          <option value="veg">Vegetarian</option>
+          <option value="non-veg">Non-Vegetarian</option>
+          <option value="cheese">Cheese Lovers</option>
+        </select>
+
+        <label for="price-filter">Price:</label>
+        <select id="price-filter">
+          <option value="all">All Prices</option>
+          <option value="low">Below $10</option>
+          <option value="medium">$10 - $15</option>
+          <option value="high">Above $15</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu">
+      <h2>Our Menu</h2>
+      <div class="pizza-list">
+        <!-- Pizza Cards -->
+        <div class="pizza-card" data-category="non-veg" data-price="12.99" data-name="Pepperoni Pizza" data-description="Pepperoni, mozzarella, and tomato sauce.">
+          <img src="https://5.imimg.com/data5/MM/QO/MY-29540739/peri-peri-chicken.png" alt="Pepperoni Pizza" class="pizza-image" loading="lazy">
+          <h3>Pepperoni Pizza</h3>
+          <p><strong>Price:</strong> $12.99</p>
+        </div>
+        <div class="pizza-card" data-category="veg" data-price="10.99" data-name="Veggie Pizza" data-description="Bell peppers, onions, olives, and mushrooms.">
+          <img src="https://www.superhealthykids.com/wp-content/uploads/2021/10/best-veggie-pizza-featured-image-square-2.jpg" alt="Veggie Pizza" class="pizza-image" loading="lazy">
+          <h3>Veggie Pizza</h3>
+          <p><strong>Price:</strong> $10.99</p>
+        </div>
+        <div class="pizza-card" data-category="cheese" data-price="9.99" data-name="Cheese Pizza" data-description="Mozzarella, cheddar, and parmesan cheese.">
+          <img src="https://www.inspiredtaste.net/wp-content/uploads/2023/08/Cheese-Pizza-2-1200.jpg" alt="Cheese Pizza" class="pizza-image" loading="lazy">
+          <h3>Cheese Pizza</h3>
+          <p><strong>Price:</strong> $9.99</p>
+        </div>
+        <div class="pizza-card" data-category="non-veg" data-price="15.99" data-name="BBQ Chicken Pizza" data-description="BBQ chicken, onions, and cilantro.">
+          <img src="https://www.allrecipes.com/thmb/qZ7LKGV1_RYDCgYGSgfMn40nmks=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-24878-bbq-chicken-pizza-beauty-4x3-39cd80585ad04941914dca4bd82eae3d.jpg" alt="BBQ Chicken Pizza" class="pizza-image" loading="lazy">
+          <h3>BBQ Chicken Pizza</h3>
+          <p><strong>Price:</strong> $15.99</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for Pizza Details -->
+  <div id="pizza-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-category"></p>
+      <p id="modal-price"></p>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Pizza Paradise | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
